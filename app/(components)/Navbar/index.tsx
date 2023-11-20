@@ -6,9 +6,9 @@ import classNames from "classnames"
 
 export function Navbar(){
   const {activeSection}= useActiveSectionContext()
-  // console.log('active',activeSection)
+  console.log('active',activeSection)
   return (
-    <div className="sticky top-0 flex">
+    <div className="sticky top-0 flex z-10">
       {Object.values(links).map(link=>(
         <a href={toLinkHash(link)} className={classNames({
           "border border-black":activeSection===link

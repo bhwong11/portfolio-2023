@@ -3,6 +3,7 @@ import Header from '@/app/(components)/Header'
 import About from '@/app/(components)/About'
 import SectionDivider from '@/app/(components)/SectionDivider'
 import { Navbar } from './(components)/Navbar'
+import Projects from './(components)/Projects'
 
 export default function Home() {
   return (
@@ -11,6 +12,7 @@ export default function Home() {
       <Header/>
       <SectionDivider/>
       <About/>
+      <Projects/>
     </main>
   )
 }

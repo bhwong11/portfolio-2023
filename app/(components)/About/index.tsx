@@ -9,7 +9,7 @@ import { links } from '@/app/lib/data';
 export default function About() {
   const ref = useSetActiveSection(links.about)
   return (
-    <div ref={ref} id={links.about}>
+    <section ref={ref} id={links.about}>
     <motion.section
       className="mb-28 max-w-[45rem] text-center leading-8 sm:mb-40 scroll-mt-28"
       initial={{ opacity: 0, y: 100 }}
@@ -25,6 +25,6 @@ export default function About() {
       I'm never too far from either a kitchen or keyboard.
       </p>
     </motion.section>
-    </div>
+    </section>
   )
 }

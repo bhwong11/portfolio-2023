@@ -4,15 +4,17 @@ import { links } from "@/app/lib/data";
 import { useInView } from "react-intersection-observer";
 import { SectionId } from "@/app/lib/types";
 
-export const useSetActiveSection = (sectionId:SectionId, threshold = 0.75)=>{
-  const {ref, inView} = useInView({
-    threshold
-  })
-  const { setActiveSection,} = useActiveSectionContext()
+export const useSetActiveSection = (sectionId:SectionId)=>{
+  const {ref, inView} = useInView()
+  const { activeSection, setActiveSection,} = useActiveSectionContext()
   useEffect(()=>{
-    console.log('section',sectionId,inView)
-    if(inView) setActiveSection(links[sectionId] ?? links.home)
-  },[inView])
+    if(inView) {
+      setActiveSection(links[sectionId] ?? links.home)
+    }
+    if(!inView && activeSection===sectionId){
+      setActiveSection(null)
+    }
+  },[inView, activeSection])
 
   return ref
 }

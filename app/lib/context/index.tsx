@@ -9,8 +9,8 @@ type ActiveSectionContextProviderProps = {
 };
 
 type ActiveSectionContextType = {
-  activeSection: SectionId;
-  setActiveSection: React.Dispatch<React.SetStateAction<SectionId>>;
+  activeSection: SectionId | null;
+  setActiveSection: React.Dispatch<React.SetStateAction<SectionId | null>>;
 };
 
 export const ActiveSectionContext = createContext<ActiveSectionContextType | null>(null);
@@ -18,7 +18,7 @@ export const ActiveSectionContext = createContext<ActiveSectionContextType | nul
 export function ActiveSectionContextProvider({
   children,
 }: ActiveSectionContextProviderProps) {
-  const [activeSection, setActiveSection] = useState<SectionId>(links.home)
+  const [activeSection, setActiveSection] = useState<SectionId | null>(links.home)
 
   return (
     <ActiveSectionContext.Provider
