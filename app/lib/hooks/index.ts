@@ -5,11 +5,12 @@ import { links } from "@/app/lib/data";
 import { SectionId } from "@/app/lib/types";
 import { useInView } from "framer-motion";
 
-export const useSetActiveSection = (ref:MutableRefObject<null | Element>,sectionId: SectionId)=>{
-  const inView = useInView(ref)
+export const useActiveSectionScrollSpy = (ref:MutableRefObject<null | Element>,sectionId: SectionId)=>{
+  const inView = useInView(ref,{
+    amount: 0.3
+  })
   const { activeSection, setActiveSection,} = useActiveSectionContext()
   useEffect(()=>{
-    console.log('active section',sectionId,)
     if(inView) {
       setActiveSection(links[sectionId])
     }

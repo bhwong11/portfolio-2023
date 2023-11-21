@@ -2,12 +2,12 @@
 import { motion } from "framer-motion";
 import SectionHeading from '@/app/(components)/SectionHeading';
 import { useRef } from 'react';
-import { useSetActiveSection } from '@/app/lib/hooks';
+import { useActiveSectionScrollSpy } from '@/app/lib/hooks';
 import { links } from '@/app/lib/data';
 
 export default function About() {
-  const ref = useRef(null)
-  const {inView} = useSetActiveSection(ref,links.about)
+  const ref = useRef<HTMLDivElement>(null)
+  const {inView} = useActiveSectionScrollSpy(ref,links.about)
   return (
     <section ref={ref} id={links.about}>
     <motion.section

@@ -5,12 +5,12 @@ import { BsArrowRight, BsLinkedin } from "react-icons/bs";
 import { FaGithubSquare } from "react-icons/fa";
 import { motion } from "framer-motion";
 import { useRef } from 'react';
-import { useSetActiveSection } from '@/app/lib/hooks';
+import { useActiveSectionScrollSpy } from '@/app/lib/hooks';
 import { links } from '@/app/lib/data';
 
 export default function Header() {
-  const ref = useRef(null)
-  useSetActiveSection(ref,links.home)
+  const ref = useRef<HTMLDivElement>(null)
+  useActiveSectionScrollSpy(ref,links.home)
   return (
       <div
         ref={ref}
@@ -39,7 +39,10 @@ export default function Header() {
         initial={{ opacity: 0, y: 100 }}
         animate={{ opacity: 1, y: 0 }}
       >
-        <span className="font-bold">Hi I'm Bryant, A full-stack developer</span>
+        <span className="font-bold">
+          <div>Hi I'm Bryant,</div>
+          <div>A full-stack developer</div>
+        </span>
       </motion.h1>
 
       <motion.div

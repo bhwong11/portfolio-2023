@@ -5,14 +5,29 @@ import { useActiveSectionContext } from "@/app/lib/context"
 import classNames from "classnames"
 
 export default function Navbar(){
-  const {activeSection}= useActiveSectionContext()
-  console.log('active',activeSection)
+  const {activeSection,setActiveSection}= useActiveSectionContext()
   return (
     <div className="sticky top-0 flex z-10">
       {Object.values(links).map(link=>(
-        <a href={toLinkHash(link)} className={classNames({
-          "border border-black":activeSection===link
-        })}>
+        <a 
+          // href={toLinkHash(link)} 
+          key={`link-${link}`}
+          onClick={()=>{
+            setActiveSection(link)
+            const linkEl: HTMLElement | null = document.querySelector(toLinkHash(link))
+            console.log('LINK',linkEl?.offsetTop,linkEl?.offsetHeight,window.innerHeight)
+
+            let scrollTo:number = (linkEl?.offsetTop??0)-(window.innerHeight-(linkEl?.offsetHeight??0))
+
+            if((linkEl?.offsetHeight??0)>window.innerHeight){
+              scrollTo = (linkEl?.offsetTop??0)-50
+            }
+            window.scrollTo(0,scrollTo) 
+          }}
+          className={classNames({
+            "border border-black":activeSection===link
+          })}
+        >
           {link}
         </a>
       ))}
