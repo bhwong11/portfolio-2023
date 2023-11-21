@@ -30,12 +30,11 @@ export default function Skills() {
     <section
       id={links.skills}
       ref={ref}
-      className="mb-28 max-w-[53rem] scroll-mt-28 text-center"
     >
       <motion.section
-        className="max-w-[45rem] text-center leading-8 scroll-mt-28"
+        className="max-w-[45rem] text-center leading-8"
         initial={{ opacity: 0, y: 100 }}
-        animate={inView?{ opacity: 1, y: 0 }:{}}
+        animate={inView?{ opacity: 1, y: 0 }:{opacity: 0, y: -100}}
         transition={{ delay: 0.175 }}
       >
         <SectionHeading>My skills</SectionHeading>

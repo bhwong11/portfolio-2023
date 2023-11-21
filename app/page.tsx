@@ -15,9 +15,13 @@ export default function Home() {
       <Header/>
       <SectionDivider/>
       <About/>
+      <SectionDivider className="my-12"/>
       <Projects/>
+      <SectionDivider/>
       <Skills/>
+      <SectionDivider/>
       <Resume/>
+      <SectionDivider/>
       <Contact/>
     </main>
   )

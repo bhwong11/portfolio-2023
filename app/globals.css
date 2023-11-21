@@ -13,3 +13,6 @@ html {
 body {
   color: rgb(var(--foreground-rgb));
 }
+button{
+  @apply font-mono;
+}

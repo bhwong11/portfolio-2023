@@ -23,7 +23,6 @@ export default function Contact(){
       subject,
       message
     })
-    console.log('status',status)
     setPending(false)
     if(status===200){
       setEmail("")
@@ -38,7 +37,7 @@ export default function Contact(){
       <motion.section
         className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
         initial={{ opacity: 0, y: 100 }}
-        animate={inView?{ opacity: 1, y: 0 }:{}}
+        animate={inView?{ opacity: 1, y: 0 }:{opacity: 0, y: -100}}
         transition={{ delay: 0.175 }}
       >
       <SectionHeading>

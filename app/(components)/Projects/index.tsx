@@ -14,7 +14,7 @@ export default function Projects() {
   useActiveSectionScrollSpy(ref,links.projects);
 
   return (
-    <div ref={ref} id={links.projects} className="scroll-mt-28 mb-28">
+    <div ref={ref} id={links.projects}>
       <SectionHeading>My projects</SectionHeading>
       <div>
         {projectsData.map((project, index) => (
