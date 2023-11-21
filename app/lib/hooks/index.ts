@@ -1,20 +1,24 @@
 import React,{MutableRefObject, useEffect} from "react"
 import { useActiveSectionContext } from "@/app/lib/context"
 import { links } from "@/app/lib/data";
-import { useInView } from "react-intersection-observer";
+// import { useInView } from "react-intersection-observer";
 import { SectionId } from "@/app/lib/types";
+import { useInView } from "framer-motion";
 
-export const useSetActiveSection = (sectionId:SectionId)=>{
-  const {ref, inView} = useInView()
+export const useSetActiveSection = (ref:MutableRefObject<null | Element>,sectionId: SectionId)=>{
+  const inView = useInView(ref)
   const { activeSection, setActiveSection,} = useActiveSectionContext()
   useEffect(()=>{
+    console.log('active section',sectionId,)
     if(inView) {
-      setActiveSection(links[sectionId] ?? links.home)
+      setActiveSection(links[sectionId])
     }
     if(!inView && activeSection===sectionId){
       setActiveSection(null)
     }
   },[inView, activeSection])
 
-  return ref
+  return {
+    inView
+  }
 }

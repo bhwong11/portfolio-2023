@@ -7,15 +7,14 @@ import { motion } from "framer-motion";
 import { useRef } from 'react';
 import { useSetActiveSection } from '@/app/lib/hooks';
 import { links } from '@/app/lib/data';
-import { toLinkId } from '@/app/lib/helpers';
-import { useInView } from "framer-motion"
 
 export default function Header() {
-  const ref = useSetActiveSection(links.home)
+  const ref = useRef(null)
+  useSetActiveSection(ref,links.home)
   return (
       <div
         ref={ref}
-        id={toLinkId(links.home)}
+        id={links.home}
         className="pt-24 max-w-5xl w-full items-center justify-between font-mono text-sm flex flex-col"
       >
           <motion.div

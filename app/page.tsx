@@ -2,8 +2,11 @@ import Image from 'next/image'
 import Header from '@/app/(components)/Header'
 import About from '@/app/(components)/About'
 import SectionDivider from '@/app/(components)/SectionDivider'
-import { Navbar } from './(components)/Navbar'
-import Projects from './(components)/Projects'
+import Navbar from '@/app/(components)/Navbar'
+import Projects from '@/app/(components)/Projects'
+import Skills from '@/app/(components)/Skills'
+import Contact from '@/app/(components)/Contact'
+import Resume from '@/app/(components)/Resume'
 
 export default function Home() {
   return (
@@ -13,6 +16,9 @@ export default function Home() {
       <SectionDivider/>
       <About/>
       <Projects/>
+      <Skills/>
+      <Resume/>
+      <Contact/>
     </main>
   )
 }

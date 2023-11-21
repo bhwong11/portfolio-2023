@@ -4,7 +4,7 @@ import { toLinkHash} from "@/app/lib/helpers"
 import { useActiveSectionContext } from "@/app/lib/context"
 import classNames from "classnames"
 
-export function Navbar(){
+export default function Navbar(){
   const {activeSection}= useActiveSectionContext()
   console.log('active',activeSection)
   return (

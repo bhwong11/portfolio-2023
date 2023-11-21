@@ -3,6 +3,7 @@ export const links = {
   about: 'about',
   projects: 'projects',
   skills: 'skills',
+  resume: 'resume',
   contact: 'contact'
 } as const;
 
@@ -58,3 +59,5 @@ export const skillsData = [
   "Django",
   "Framer Motion",
 ] as const;
+
+export const mailerApi = '/mailer/api'
