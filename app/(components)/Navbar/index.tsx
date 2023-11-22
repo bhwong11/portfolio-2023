@@ -7,10 +7,9 @@ import classNames from "classnames"
 export default function Navbar(){
   const {activeSection,setActiveSection}= useActiveSectionContext()
   return (
-    <div className="sticky top-0 flex z-10 font-mono">
+    <div className="fixed top-0 flex z-10 font-mono">
       {Object.values(links).map(link=>(
         <a 
-          // href={toLinkHash(link)} 
           key={`link-${link}`}
           onClick={()=>{
             setActiveSection(link)
