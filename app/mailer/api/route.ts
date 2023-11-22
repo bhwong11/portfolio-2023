@@ -4,7 +4,6 @@ import { MailData } from '@/app/lib/types';
 
 export async function POST(req: Request, res: Response) {
   const body: MailData = await req.json()
-  console.log('BODY',body)
   const {
     email,
     subject,
