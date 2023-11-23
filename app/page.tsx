@@ -12,7 +12,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center justify-between px-24">
       <Navbar/>
-      <div className="h-screen flex flex-col items-center justify-center">
+      <div className="header flex flex-col items-center justify-center">
       <Header/>
       <SectionDivider/>
       </div>

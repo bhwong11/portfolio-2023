@@ -32,16 +32,16 @@ export default function Skills() {
       ref={ref}
     >
       <motion.section
-        className="max-w-[45rem] text-center leading-8"
+        className="max-w-[45rem] text-center"
         initial={{ opacity: 0, y: 100 }}
         animate={inView?{ opacity: 1, y: 0 }:{opacity: 0, y: -100}}
         transition={{ delay: 0.175 }}
       >
         <SectionHeading>My skills</SectionHeading>
-        <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+        <ul className="flex flex-wrap justify-center gap-3 text-lg text-gray-800">
           {skillsData.map((skill, index) => (
             <motion.li
-              className="bg-white borderBlack rounded-xl px-5 py-3 dark:bg-white/10 dark:text-white/80"
+              className="bg-white border border-black rounded-xl px-5 py-3"
               key={index}
               variants={fadeInAnimationVariants}
               initial="initial"

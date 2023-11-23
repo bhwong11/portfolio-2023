@@ -3,12 +3,20 @@ import { links } from "@/app/lib/data"
 import { toLinkHash} from "@/app/lib/helpers"
 import { useActiveSectionContext } from "@/app/lib/context"
 import classNames from "classnames"
+import { useRef, useEffect } from "react"
+import { SectionId } from "@/app/lib/types"
 
 export default function Navbar(){
   const {activeSection,setActiveSection}= useActiveSectionContext()
+  const ref = useRef(null)
+  const navbarHeight = ref.current?.['offsetHeight'] || '0px'
+  useEffect(()=>{
+    console.log('navbarHeight',navbarHeight)
+    document.documentElement.style.setProperty('--navbar-height',`${navbarHeight}px`)
+  },[navbarHeight])
   return (
-    <div className="fixed top-0 flex z-10 font-mono">
-      {Object.values(links).map(link=>(
+    <div ref={ref} className="sticky top-0 flex gap-3 z-10 font-mono py-6">
+      {Object.values(links).map((link:SectionId)=>(
         <a 
           key={`link-${link}`}
           onClick={()=>{
@@ -21,9 +29,11 @@ export default function Navbar(){
             }
             window.scrollTo(0,scrollTo) 
           }}
-          className={classNames({
-            "border border-black":activeSection===link
-          })}
+          className={classNames(
+            {
+              "border border-black":activeSection===link
+            }
+          )}
         >
           {link}
         </a>
