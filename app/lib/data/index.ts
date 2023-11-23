@@ -9,18 +9,18 @@ export const links = {
 
 export const projectsData = [
   {
+    title: "Splendid Spoon",
+    description:
+    "I worked as a contributing full-stack developer on this website for 2 years. E-commernce meal kit delivery website.",
+    tags: ["React", "TypeScript", "Bootstrap", "Redux", "Zustand", "Django", "Python", "Hugo"],
+    imageUrl: "https://i.imgur.com/KimwQrn.png",
+  },
+  {
     title: "CorpComment",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
     tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
     imageUrl: "https://i.imgur.com/dKOEoRQ.png",
-  },
-  {
-    title: "rmtDev",
-    description:
-      "Job board for remote developer jobs. I was the front-end developer. It has features like filtering, sorting and pagination.",
-    tags: ["React", "TypeScript", "Next.js", "Tailwind", "Redux"],
-    imageUrl: "https://i.imgur.com/KimwQrn.png",
   },
   {
     title: "Word Analytics",
@@ -39,25 +39,23 @@ export const projectsData = [
 ] as const;
 
 export const skillsData = [
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "TypeScript",
-  "React",
-  "Next.js",
-  "Node.js",
-  "Git",
-  "Tailwind",
-  "Prisma",
-  "MongoDB",
-  "Redux",
-  "GraphQL",
-  "Apollo",
-  "Express",
-  "PostgreSQL",
-  "Python",
-  "Django",
-  "Framer Motion",
-] as const;
+'React.js',
+'Redux',
+'Bootstrap',
+'Tailwind',
+'Zustand',
+'Hugo',
+'HTML5',
+'CSS3',
+'SASS',
+'Typescript',
+'Nextjs',
+'Node.js',
+'Express.js',
+'Django',
+'SQL',
+'Postgres',
+'MongoDB',
+'GraphQL'] as const;
 
 export const mailerApi = '/mailer/api'

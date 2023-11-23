@@ -4,12 +4,13 @@ import { useActiveSectionScrollSpy } from "@/app/lib/hooks"
 import { links } from "@/app/lib/data"
 import { useRef } from "react"
 import SectionHeading from "@/app/(components)/SectionHeading";
+import SectionDivider from '@/app/(components)/SectionDivider'
 
 export default function Resume(){
   const ref = useRef<HTMLDivElement>(null)
   const {inView}=useActiveSectionScrollSpy(ref,links.resume)
   return(
-    <section ref={ref} id={links.resume}>
+    <section ref={ref} id={links.resume} className="flex flex-col items-center">
     <motion.section
       className="max-w-[45rem] text-center flex flex-col items-center leading-8"
       initial={{ opacity: 0, y: 100 }}
@@ -18,7 +19,7 @@ export default function Resume(){
     >
           <SectionHeading>Want To Work Togther?</SectionHeading>
           <a
-            className="font-mono flex items-center justify-center gap-2 h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 disabled:scale-100 disabled:opacity-50"
+            className="font-mono px-4 w-max flex items-center justify-center h-[3rem] w-[8rem] bg-gray-900 text-white rounded-full outline-none transition-all focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 disabled:scale-100 disabled:opacity-50"
             href="/resume.pdf"
             target="_blank"
             rel="noreferrer"
@@ -26,6 +27,7 @@ export default function Resume(){
             View Resume
           </a>
       </motion.section>
+      <SectionDivider/>
     </section>
   )
 }

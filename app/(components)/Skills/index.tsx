@@ -7,11 +7,13 @@ import { useActiveSectionScrollSpy } from "@/app/lib/hooks";
 import { motion } from "framer-motion";
 import { links } from "@/app/lib/data";
 import { useRef } from "react";
+import SectionDivider from '@/app/(components)/SectionDivider'
+
 
 const fadeInAnimationVariants = {
   initial: {
     opacity: 0,
-    y: 100,
+    y: 10,
   },
   animate: (index: number) => ({
     opacity: 1,
@@ -30,6 +32,7 @@ export default function Skills() {
     <section
       id={links.skills}
       ref={ref}
+      className="flex flex-col items-center"
     >
       <motion.section
         className="max-w-[45rem] text-center"
@@ -53,6 +56,7 @@ export default function Skills() {
           ))}
         </ul>
       </motion.section>
+      <SectionDivider/>
     </section>
   );
 }
