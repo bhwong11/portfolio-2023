@@ -10,9 +10,7 @@ export const sendMail = async (formData:MailData)=>{
       },
       body: JSON.stringify(formData)
     })
-    console.log('res',res)
     const message = await res.json()
-    console.log('mess',message)
     return {
       status: res.status,
       message
