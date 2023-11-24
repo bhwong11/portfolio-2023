@@ -5,11 +5,12 @@ import Projects from '@/app/(components)/Projects'
 import Skills from '@/app/(components)/Skills'
 import Contact from '@/app/(components)/Contact'
 import Resume from '@/app/(components)/Resume'
-import AnimationBLock from '@/app/(components)/AnimationBlock'
+import { MotionPlaceHolder } from '@/app/(components)/PlacerHolder'
 
 export default function Home() {
   return (
     <>
+    <MotionPlaceHolder/>
     <Navbar/>
     <main className="flex min-h-screen flex-col items-center justify-between px-24">
       <Header/>

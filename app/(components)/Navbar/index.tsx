@@ -1,17 +1,16 @@
 "use client"
 import { links } from "@/app/lib/data"
-import { toLinkHash} from "@/app/lib/helpers"
 import { useActiveSectionContext } from "@/app/lib/context"
 import classNames from "classnames"
 import { useRef, useEffect } from "react"
 import { SectionId } from "@/app/lib/types"
 import { motion } from "framer-motion";
-
+import { scrollToLink } from "@/app/lib/helpers"
 
 export default function Navbar(){
   const {activeSection}= useActiveSectionContext()
   const ref = useRef(null)
-  const navbarHeight = ref.current?.['offsetHeight'] || '0px'
+  const navbarHeight = ref.current?.['offsetHeight'] || 0
 
   useEffect(()=>{
     document.documentElement.style.setProperty('--navbar-height',`${navbarHeight}px`)
@@ -32,13 +31,7 @@ export default function Navbar(){
           <a 
             key={`link-${link}`}
             onClick={()=>{
-              const linkEl: HTMLElement | null = document.querySelector(toLinkHash(link))
-              let scrollTo:number = (linkEl?.offsetTop??0)-(window.innerHeight-(linkEl?.offsetHeight??0))
-
-              if((linkEl?.offsetHeight??0)>window.innerHeight){
-                scrollTo = (linkEl?.offsetTop??0)-50
-              }
-              window.scrollTo(0,scrollTo) 
+              scrollToLink(link,navbarHeight)
             }}
             className={classNames(
               "rounded-full px-2 py-1 hover:cursor-pointer",
