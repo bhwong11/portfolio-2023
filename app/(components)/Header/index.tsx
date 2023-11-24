@@ -66,7 +66,7 @@ export default function Header() {
 
             <a
               className="w-full sm:w-auto bg-white p-4 text-gray-700 hover:text-gray-950 flex justify-center items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black"
-              href="https://linkedin.com/bryanthwong"
+              href="https://linkedin.com/in/bryanthwong"
               target="_blank"
             >
               <BsLinkedin /><span className="sm:hidden">LinkedIn</span>
