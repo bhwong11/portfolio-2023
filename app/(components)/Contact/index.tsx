@@ -35,7 +35,7 @@ export default function Contact(){
   return (
     <section ref={ref} id={links.contact}>
       <motion.section
-        className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+        className="bg-white border border-black rounded-lg p-3 shadow-md mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
         initial={{ opacity: 0, y: 100 }}
         animate={inView?{ opacity: 1, y: 0 }:{opacity: 0, y: -100}}
         transition={{ delay: 0.175 }}

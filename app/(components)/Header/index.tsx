@@ -8,6 +8,7 @@ import { useRef } from 'react';
 import { useActiveSectionScrollSpy } from '@/app/lib/hooks';
 import { links } from '@/app/lib/data';
 import SectionDivider from '@/app/(components)/SectionDivider'
+import AnimationBLock from '@/app/(components)/AnimationBlock';
 
 export default function Header() {
   const ref = useRef<HTMLDivElement>(null)
@@ -18,6 +19,7 @@ export default function Header() {
         id={links.home}
         className="header pt-24 max-w-5xl w-full items-center justify-between font-mono text-sm flex flex-col"
       >
+          <AnimationBLock/>
           <motion.div
             initial={{ opacity: 0, scale: 0 }}
             animate={{ opacity: 1, scale: 1 }}

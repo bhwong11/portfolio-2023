@@ -9,7 +9,7 @@ import { motion } from "framer-motion";
 
 
 export default function Navbar(){
-  const {activeSection,setActiveSection}= useActiveSectionContext()
+  const {activeSection}= useActiveSectionContext()
   const ref = useRef(null)
   const navbarHeight = ref.current?.['offsetHeight'] || '0px'
 
@@ -32,7 +32,6 @@ export default function Navbar(){
           <a 
             key={`link-${link}`}
             onClick={()=>{
-              setActiveSection(link)
               const linkEl: HTMLElement | null = document.querySelector(toLinkHash(link))
               let scrollTo:number = (linkEl?.offsetTop??0)-(window.innerHeight-(linkEl?.offsetHeight??0))
 
@@ -42,7 +41,7 @@ export default function Navbar(){
               window.scrollTo(0,scrollTo) 
             }}
             className={classNames(
-              "rounded-full px-2 py-1",
+              "rounded-full px-2 py-1 hover:cursor-pointer",
               {
                 "border border-black":activeSection===link
               }

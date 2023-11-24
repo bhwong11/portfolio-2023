@@ -5,6 +5,7 @@ import Projects from '@/app/(components)/Projects'
 import Skills from '@/app/(components)/Skills'
 import Contact from '@/app/(components)/Contact'
 import Resume from '@/app/(components)/Resume'
+import AnimationBLock from '@/app/(components)/AnimationBlock'
 
 export default function Home() {
   return (
