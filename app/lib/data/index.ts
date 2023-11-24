@@ -18,22 +18,22 @@ export const projectsData = [
   {
     title: "Splendor Board Game",
     description:
-      "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
+      "An Online version of the resource management board game Splendor! Candy themed. (similiar to the game Cantan)",
     tags: ["Reactjs", "Next.js", "Express","Socket.io","Node","MongoDB", "Tailwind"],
     imageUrl: "https://i.imgur.com/dKOEoRQ.png",
   },
   {
     title: "Word Analytics",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "A quiz game where users can play trivia quiz games of various difficulty, save scores, and see top ranking players.",
+    tags: ["Reactjs", "TypeScript", "Express", "GraphQL","Node","MongoDB", "Bootstap"],
     imageUrl: "https://i.imgur.com/D2YVV9L.png",
   },
   {
     title: "Word Analytics",
     description:
-      "A public web app for quick analytics on text. It shows word count, character count and social media post limits.",
-    tags: ["React", "Next.js", "SQL", "Tailwind", "Framer"],
+      "An Ecommerce Store where users can buy products and leave reviews, and admin users can create products and product categories",
+    tags: ["Reactjs", "TypeScript", "Redux", "Reactjs", "Stripe", "GraphQL", "Node", "Express", "MongoDB"],
     imageUrl: "https://i.imgur.com/nc8Kws9.png",
   },
 ] as const;
