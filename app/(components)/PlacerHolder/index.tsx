@@ -3,7 +3,7 @@ import {motion} from "framer-motion"
 import { onloadMotionDelay } from "@/app/lib/helpers"
 
 type MotionPlaceHolderProps = {
-  delay:number
+  delay?:number
 }
 
 export const MotionPlaceHolder = ({delay = onloadMotionDelay}:MotionPlaceHolderProps)=>(
