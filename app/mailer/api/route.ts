@@ -16,6 +16,7 @@ export async function POST(req: Request, res: Response) {
     text: emailMessage ?? "no message",
     html: `<p>from:${email} ${emailMessage}</p>`,
   };
+  console.log('EMAIL!!',process.env.NEXT_PUBLIC_GMAIL_EMAIL_ADDRESS,)
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
