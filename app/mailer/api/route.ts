@@ -17,7 +17,7 @@ export async function POST(req: Request, res: Response) {
     html: `<p>from:${email} ${emailMessage}</p>`,
   };
   console.log('EMAIL!!',process.env.NEXT_PUBLIC_GMAIL_EMAIL_ADDRESS,)
-  console.log('EMAIL PASS!!',process.env.NEXT_PUBLIC_GMAIL_APP_PASSWORD,)
+  console.log('EMAIL PASS!!!',process.env.NEXT_PUBLIC_GMAIL_APP_PASSWORD,)
 
   let transporter = nodemailer.createTransport({
     service: 'gmail',
