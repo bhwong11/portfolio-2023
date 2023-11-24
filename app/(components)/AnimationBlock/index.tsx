@@ -31,16 +31,20 @@ type LineCoord ={
 export default function AnimationBLock({
   className=""
 }:AnimationBLockProps){
-  const [screenHeight,setScreenHeight] = useState<number>(window.innerHeight)
-  const [screenWidth,setScreenWidth] = useState<number>(window.innerWidth)
+  const [screenHeight,setScreenHeight] = useState<number>(1)
+  const [screenWidth,setScreenWidth] = useState<number>(1)
 
   useEffect(()=>{
-    const resizeHandler = (e:Event) =>{
+    if(typeof window !== undefined){
       setScreenHeight(window.innerHeight)
       setScreenWidth(window.innerWidth)
+      const resizeHandler = () =>{
+        setScreenHeight(window.innerHeight)
+        setScreenWidth(window.innerWidth)
+      }
+      window.addEventListener("resize",resizeHandler)
+      return ()=>window.removeEventListener("resize", resizeHandler);
     }
-    window.addEventListener("resize",resizeHandler)
-    return ()=>window.removeEventListener("resize", resizeHandler);
   },[])
   const slope = (screenHeight/(screenWidth/3))
 
