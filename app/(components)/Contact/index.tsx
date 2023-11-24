@@ -35,7 +35,7 @@ export default function Contact(){
   return (
     <section ref={ref} id={links.contact}>
       <motion.section
-        className="bg-white border border-black rounded-lg p-3 shadow-md mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+        className="bg-white border border-black rounded-lg px-3 py-5 shadow-md mb-20 sm:mb-28 text-center"
         initial={{ opacity: 0, y: 100 }}
         animate={inView?{ opacity: 1, y: 0 }:{opacity: 0, y: -100}}
         transition={{ delay: 0.175 }}
@@ -53,7 +53,7 @@ export default function Contact(){
         <form className="mt-10 flex flex-col" onSubmit={sendEmailHandler} ref={ref}>
             <label htmlFor="email" className="text-left py-2">Enter email</label>
             <input
-              className="px-4 rounded-lg border border-black transition-all"
+              className="px-4 rounded-lg border border-black"
               id="email"
               name="email"
               type="email"
@@ -62,7 +62,7 @@ export default function Contact(){
             />
             <label htmlFor="subject" className="text-left py-2">Enter subject</label>
             <input 
-              className="px-4 rounded-lg border border-black transition-all"
+              className="px-4 rounded-lg border border-black"
               id="subject"
               name="subject"
               type="text"
@@ -74,7 +74,7 @@ export default function Contact(){
             <textarea
               id="message"
               name="message"
-              className="w-full h-52 my-3 rounded-lg border border-black p-4 transition-all"
+              className="w-full h-52 my-3 rounded-lg border border-black p-4"
               value={message}
               onChange={(e)=>setMessage(e.target.value)}
             />

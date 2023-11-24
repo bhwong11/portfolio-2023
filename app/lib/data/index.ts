@@ -16,10 +16,10 @@ export const projectsData = [
     imageUrl: "https://i.imgur.com/KimwQrn.png",
   },
   {
-    title: "CorpComment",
+    title: "Splendor Board Game",
     description:
       "I worked as a full-stack developer on this startup project for 2 years. Users can give public feedback to companies.",
-    tags: ["React", "Next.js", "MongoDB", "Tailwind", "Prisma"],
+    tags: ["Reactjs", "Next.js", "Express","Socket.io","Node","MongoDB", "Tailwind"],
     imageUrl: "https://i.imgur.com/dKOEoRQ.png",
   },
   {
