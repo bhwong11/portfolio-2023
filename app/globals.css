@@ -12,5 +12,5 @@ button{
   @apply font-mono;
 }
 .header{
-  height: calc(100vh - var(--navbar-height));
+  min-height: calc(100vh - var(--navbar-height));
 }

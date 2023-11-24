@@ -12,7 +12,7 @@ export default function Home() {
     <>
     <MotionPlaceHolder/>
     <Navbar/>
-    <main className="flex min-h-screen flex-col items-center justify-between px-24">
+    <main className="flex min-h-screen flex-col items-center justify-between px-8 sm:px-24">
       <Header/>
       <About/>
       <Projects/>
