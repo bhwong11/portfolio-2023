@@ -43,7 +43,7 @@ export default function Header() {
             animate={{ opacity: 1, y: 0 }}
           >
             <span className="font-bold">
-              <div>Hi I'm Bryant,</div>
+              <div>Hi I&apos;m Bryant,</div>
               <div>A full-stack developer</div>
             </span>
           </motion.h1>

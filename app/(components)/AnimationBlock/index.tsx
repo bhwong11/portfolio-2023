@@ -81,8 +81,9 @@ export default function AnimationBLock({
       exit={{pathLength: 0}}
       className={classNames("fixed top-0 -z-50",className)}
     >
-      {linesCoords.map((lineCoord:LineCoord)=>(
+      {linesCoords.map((lineCoord:LineCoord, idx:number)=>(
         <motion.line
+          key={`line-coords-${idx}`}
           x1={lineCoord.x1}
           y1={lineCoord.y1}
           x2={lineCoord.x2}

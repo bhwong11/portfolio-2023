@@ -22,8 +22,8 @@ export default function About() {
       <p className="mb-3">
       I am a software engineer with experience in JavaScript, HTML, CSS, REACTjs, the Django Stack, and the MERN Stack. 
       My background in digital marketing has given me an eye for detail and experience with reading documentation to learn new technologies. 
-      I am passionate about problem solving, love testing and learning. Along with programing I love to cook. 
-      I'm never too far from either a kitchen or keyboard.
+      I am passionate about problem solving, love testing and learning. Along with programing I love to cook (and eat). 
+      I&apos;m never too far from either a kitchen or keyboard.
       </p>
     </motion.section>
     <SectionDivider className="my-12"/>
