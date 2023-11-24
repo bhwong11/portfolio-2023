@@ -11,7 +11,7 @@ export const MotionPlaceHolder = ({delay = onloadMotionDelay}:MotionPlaceHolderP
   initial={{ opacity: 1}}
   animate={{ opacity: 0 }}
   transition={{ delay:delay-.05 }}
-  className="absolute flex justify-center items-center font-mono h-screen w-full"
+  className="absolute flex justify-center items-center font-mono h-screen w-full -z-10"
   >
     LOADING...
   </motion.div>
