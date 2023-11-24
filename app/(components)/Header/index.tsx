@@ -9,6 +9,7 @@ import { useActiveSectionScrollSpy } from '@/app/lib/hooks';
 import { links } from '@/app/lib/data';
 import SectionDivider from '@/app/(components)/SectionDivider'
 import AnimationBLock from '@/app/(components)/AnimationBlock';
+import { scrollToLink } from '@/app/lib/helpers';
 
 export default function Header() {
   const ref = useRef<HTMLDivElement>(null)
@@ -56,13 +57,16 @@ export default function Header() {
               delay: 0.1,
             }}
           >
-            <Link
-              href="#contact"
+            <button
+              onClick={():void=>{
+                const navbarHeightProp = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height'));
+                scrollToLink(links.contact,navbarHeightProp)
+              }}
               className="text-center bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
             >
               Contact me here{" "}
               <BsArrowRight className="opacity-70 group-hover:translate-x-1 transition" />
-            </Link>
+            </button>
 
             <a
               className="w-full sm:w-auto bg-white p-4 text-gray-700 hover:text-gray-950 flex justify-center items-center gap-2 rounded-full focus:scale-[1.15] hover:scale-[1.15] active:scale-105 transition cursor-pointer border border-black"
