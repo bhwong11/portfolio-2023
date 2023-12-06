@@ -23,14 +23,14 @@ export const projectsData = [
     imageUrl: "https://i.imgur.com/dKOEoRQ.png",
   },
   {
-    title: "Word Analytics",
+    title: "Trivia Ranker",
     description:
       "A quiz game where users can play trivia quiz games of various difficulty, save scores, and see top ranking players.",
     tags: ["Reactjs", "TypeScript", "Express", "GraphQL","Node","MongoDB", "Bootstap"],
     imageUrl: "https://i.imgur.com/D2YVV9L.png",
   },
   {
-    title: "Word Analytics",
+    title: "E-Commerce App",
     description:
       "An Ecommerce Store where users can buy products and leave reviews, and admin users can create products and product categories",
     tags: ["Reactjs", "TypeScript", "Redux", "Reactjs", "Stripe", "GraphQL", "Node", "Express", "MongoDB"],
