@@ -12,7 +12,8 @@ export const toLinkHash = (name:string): string=>{
   return `#${toLinkId(name)}`
 }
 
-export const scrollToLink = (link:SectionId,navbarHeight:number)=>{
+export const scrollToLink = (link:SectionId)=>{
+  const navbarHeight = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height'));
   const windowHeightAdjusted = window.innerHeight-navbarHeight
   const linkEl: HTMLElement | null = document.querySelector(toLinkHash(link))
   let scrollTo:number = (linkEl?.offsetTop??0)-(windowHeightAdjusted-(linkEl?.offsetHeight??0))

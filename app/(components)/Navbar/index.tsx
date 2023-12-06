@@ -28,20 +28,26 @@ export default function Navbar(){
         transition={{ delay: 0.175 }}
       >
         {Object.values(links).map((link:SectionId)=>(
+          <>
           <a 
             key={`link-${link}`}
+            data-tooltip-target="tooltip-default"
             onClick={()=>{
-              scrollToLink(link,navbarHeight)
+              scrollToLink(link)
             }}
             className={classNames(
-              "rounded-full px-2 py-1 hover:cursor-pointer",
+              "rounded-full px-2 py-1 hover:cursor-pointer group/link relative",
               {
                 "border border-black":activeSection===link
               }
             )}
           >
             {link}
+        <span className='invisible absolute group-hover/link:visible group-hover/link:z-50 shadow-md rounded p-1 bg-gray-100 top-10 left-0 xs:w-max'>
+          go to {link}
+        </span>
           </a>
+        </>
         ))}
       </motion.div>
     </div>

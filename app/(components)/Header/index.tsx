@@ -59,6 +59,7 @@ export default function Header() {
           </motion.div>
           {topSkills.map((skill,idx)=>(
             <motion.div
+              key={`${skill}-${idx}`}
               className="mt-4 px-2 text-2xl text-lg"
               initial={{ opacity: 0, y: 100 }}
               animate={{ opacity: 1, y: 0 }}
@@ -79,8 +80,7 @@ export default function Header() {
           >
             <button
               onClick={():void=>{
-                const navbarHeightProp = parseInt(getComputedStyle(document.documentElement).getPropertyValue('--navbar-height'));
-                scrollToLink(links.contact,navbarHeightProp)
+                scrollToLink(links.contact)
               }}
               className="text-center bg-gray-900 text-white px-7 py-3 flex items-center gap-2 rounded-full outline-none focus:scale-110 hover:scale-110 hover:bg-gray-950 active:scale-105 transition"
             >
