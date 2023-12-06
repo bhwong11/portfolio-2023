@@ -9,6 +9,7 @@ import { links } from '@/app/lib/data';
 import SectionDivider from '@/app/(components)/SectionDivider'
 import AnimationBLock from '@/app/(components)/AnimationBlock';
 import { scrollToLink } from '@/app/lib/helpers';
+import { topSkills } from '@/app/lib/data';
 
 export default function Header() {
   const ref = useRef<HTMLDivElement>(null)
@@ -38,7 +39,7 @@ export default function Header() {
             />
           </motion.div>
           <motion.h1
-            className="mb-10 mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-center"
+            className=" mt-4 px-4 text-2xl font-medium !leading-[1.5] sm:text-4xl text-center"
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
           >
@@ -47,6 +48,26 @@ export default function Header() {
               <div>A full-stack developer</div>
             </span>
           </motion.h1>
+          <div className="flex flex-wrap justify-center mb-10 ">
+          <motion.div
+            className="mt-4 px-2 text-2xl text-lg"
+            initial={{ opacity: 0, y: 100 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay:.1 }}
+          >
+            Specializing In:
+          </motion.div>
+          {topSkills.map((skill,idx)=>(
+            <motion.div
+              className="mt-4 px-2 text-2xl text-lg"
+              initial={{ opacity: 0, y: 100 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay:(idx+1)*.2 }}
+            >
+              {skill}
+            </motion.div>
+          ))}
+          </div>
 
           <motion.div
             className="flex flex-col sm:flex-row items-center justify-center gap-3.5 px-4 text-lg font-medium"

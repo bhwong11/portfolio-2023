@@ -42,6 +42,12 @@ export const projectsData = [
   },
 ] as const;
 
+export const topSkills = [
+  'React.js',
+  'Nextjs',
+  'Django'
+]
+
 export const skillsData = [
 'React.js',
 'Redux',
