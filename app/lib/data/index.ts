@@ -12,6 +12,7 @@ export const projectsData = [
     title: "Splendid Spoon",
     description:
     "I worked as a contributing full-stack developer on this website for 2 years. E-commernce meal kit delivery website.",
+    github:"",
     tags: ["React", "TypeScript", "Bootstrap", "Redux", "Zustand", "Django", "Python", "Hugo"],
     imageUrl: "https://i.imgur.com/KimwQrn.png",
   },
@@ -19,22 +20,25 @@ export const projectsData = [
     title: "Splendor Board Game",
     description:
       "An Online version of the resource management board game Splendor! Candy themed. (similiar to the game Cantan)",
+    github:"https://github.com/bhwong11/splendor",
     tags: ["Reactjs", "Next.js", "Express","Socket.io","Node","MongoDB", "Tailwind"],
     imageUrl: "https://i.imgur.com/dKOEoRQ.png",
-  },
-  {
-    title: "Trivia Ranker",
-    description:
-      "A quiz game where users can play trivia quiz games of various difficulty, save scores, and see top ranking players.",
-    tags: ["Reactjs", "TypeScript", "Express", "GraphQL","Node","MongoDB", "Bootstap"],
-    imageUrl: "https://i.imgur.com/D2YVV9L.png",
   },
   {
     title: "E-Commerce App",
     description:
       "An Ecommerce Store where users can buy products and leave reviews, and admin users can create products and product categories",
+    github:"https://github.com/bhwong11/ecommerce-frontend",
     tags: ["Reactjs", "TypeScript", "Redux", "Reactjs", "Stripe", "GraphQL", "Node", "Express", "MongoDB"],
     imageUrl: "https://i.imgur.com/nc8Kws9.png",
+  },
+  {
+    title: "Trivia Ranker",
+    description:
+      "A quiz game where users can play trivia quiz games of various difficulty, save scores, and see top ranking players.",
+    github:"https://github.com/bhwong11/react-quiz",
+    tags: ["Reactjs", "TypeScript", "Express", "GraphQL","Node","MongoDB", "Bootstap"],
+    imageUrl: "https://i.imgur.com/D2YVV9L.png",
   },
 ] as const;
 
