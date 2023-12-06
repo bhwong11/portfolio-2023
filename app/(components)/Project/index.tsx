@@ -41,7 +41,7 @@ export default function Project({
             <a
               href={github} 
               target="_blank" 
-              className="flex items-center mb-2 px-2 py-1 bg-white text-black hover:text-white hover:bg-black/[0.3] w-min rounded-full border border-black hover:border-0">
+              className="flex items-center mb-2 px-2 py-1 bg-gray-200 text-black hover:text-white hover:bg-black/[0.3] w-min rounded-full border border-black hover:border-white">
               <FaGithubSquare /><span className="">&nbsp;Github</span>
             </a>)
           }
