@@ -13,6 +13,7 @@ export default function Project({
   tags,
   github,
   imageUrl,
+  liveLink
 }: ProjectProps) {
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
@@ -37,6 +38,7 @@ export default function Project({
           <p className="my-2 leading-relaxed text-slate-700">
             {description}
           </p>
+          <div className="flex gap-2">
           {github && (
             <a
               href={github} 
@@ -45,6 +47,15 @@ export default function Project({
               <FaGithubSquare /><span className="">&nbsp;Github</span>
             </a>)
           }
+          {liveLink && (
+            <a
+              href={liveLink} 
+              target="_blank" 
+              className="flex items-center mb-2 px-2 py-1 bg-gray-200 text-black hover:text-white hover:bg-black/[0.3] w-fit rounded-full border border-black hover:border-white">
+              Live Link
+            </a>)
+          }
+          </div>
           <ul className="flex flex-wrap mt-4 gap-2 sm:mt-auto">
             {tags.map((tag, index) => (
               <li
