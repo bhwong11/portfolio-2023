@@ -27,6 +27,15 @@ export const projectsData = [
     imageUrl: "https://i.imgur.com/dKOEoRQ.png",
   },
   {
+    title: "Flappy Bird",
+    description:
+      "Version of the mobile game flappy bird, with a 3d version",
+    github:"https://github.com/bhwong11/flappy-bird",
+    liveLink:"https://flappy-bird-nine-sand.vercel.app/",
+    tags: ["Reactjs", "Next.js", "Three.js" ,"Node", "Tailwind"],
+    imageUrl: "https://i.imgur.com/4jYI9a2.png",
+  },
+  {
     title: "E-Commerce App",
     description:
       "An Ecommerce Store where users can buy products and leave reviews, and admin users can create products and product categories",
